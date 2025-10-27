@@ -175,9 +175,9 @@ if st.button("🔍 Analyze Sentiment", type="primary", use_container_width=True)
                 st.markdown(f"""
                 <div class="stats-box">
                     <strong>📰 Article Counts by Sentiment</strong><br>
-                    ✅ Positive Articles: <strong>{len(grouped_articles['Positive'])}</strong><br>
-                    ⚪ Neutral Articles: <strong>{len(grouped_articles['Neutral'])}</strong><br>
-                    ❌ Negative Articles: <strong>{len(grouped_articles['Negative'])}</strong><br>
+                    😊 Positive Articles: <strong>{len(grouped_articles['Positive'])}</strong><br>
+                    😐 Neutral Articles: <strong>{len(grouped_articles['Neutral'])}</strong><br>
+                    😟 Negative Articles: <strong>{len(grouped_articles['Negative'])}</strong><br>
                     <strong>Total Articles:</strong> {total}
                 </div>
                 """, unsafe_allow_html=True)
@@ -211,9 +211,9 @@ if st.button("🔍 Analyze Sentiment", type="primary", use_container_width=True)
                 neg_sorted = sorted(grouped_articles["Negative"], key=parse_date_for_sort, reverse=True)
 
                 tab1, tab2, tab3 = st.tabs([
-                    f"✅ Positive Articles ({len(pos_sorted)})",
-                    f"⚪ Neutral Articles ({len(neu_sorted)})",
-                    f"❌ Negative Articles ({len(neg_sorted)})"
+                    f"😊 Positive Articles ({len(pos_sorted)})",
+                    f"😐 Neutral Articles ({len(neu_sorted)})",
+                    f"😟 Negative Articles ({len(neg_sorted)})"
                 ])
 
                 with tab1:
